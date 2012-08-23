@@ -1,0 +1,9 @@
+# 
+# Configuration under control of Puppet!
+#
+storm.zookeeper.servers:
+<% @zookeepers.each do |zk| %>
+      - "<%= zk %>"
+<% end %>
+# 
+nimbus.host: "<%= @nimbus %>"
