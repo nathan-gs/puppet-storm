@@ -8,7 +8,7 @@ class storm::worker (
 		nimbus_host			=> $nimbus_host
 	}
 
-	service { 'storm-superviser':
+	service { 'storm-supervisor':
 		ensure	=> running,
 		require => [Package['storm']],
 	}
