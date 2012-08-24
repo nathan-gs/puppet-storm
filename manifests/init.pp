@@ -10,7 +10,7 @@ class storm (
 
 	file { "${config_dir}/storm.yml" :
 		ensure	=> present,
-		user	=> root,
+		owner	=> root,
 		content	=> template('storm/storm.yml.erb')
 	}
 }
