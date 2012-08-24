@@ -6,11 +6,17 @@ class storm (
 	
 	class { 'storm::redhat': }
 
-	$config_dir	= '/etc/storm'
+ 	$config_dir	= '/opt/storm/conf'
 
-	file { "${config_dir}/storm.yml" :
-		ensure	=> present,
-		owner	=> root,
-		content	=> template('storm/storm.yml.erb')
-	}
-}
+ 	file { "${config_dir}/storm.yaml" :
+ 		ensure	=> present,
+ 		owner	=> root,
+ 		content	=> template('storm/storm.yml.erb')
+ 	}
+
+ 	file { '/var/cache/storm':
+ 	    ensure  => directory,
+ 	    owner   => root,
+ 	    mode    => 770,
+     }
+ }

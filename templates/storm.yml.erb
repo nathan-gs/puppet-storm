@@ -7,3 +7,6 @@ storm.zookeeper.servers:
 <% end %>
 # 
 nimbus.host: "<%= @nimbus_host %>"
+
+worker.childopts: "-Xmx1024m"
+storm.local.dir: "/var/cache/storm"
