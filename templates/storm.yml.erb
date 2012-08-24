@@ -2,8 +2,8 @@
 # Configuration under control of Puppet!
 #
 storm.zookeeper.servers:
-<% @zookeepers.each do |zk| %>
+<% @zookeeper_servers.each do |zk| %>
       - "<%= zk %>"
 <% end %>
 # 
-nimbus.host: "<%= @nimbus %>"
+nimbus.host: "<%= @nimbus_host %>"
