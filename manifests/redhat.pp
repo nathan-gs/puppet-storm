@@ -22,7 +22,7 @@ class storm::redhat
     	provider	=> rpm,
     	#source		=> 'https://github.com/downloads/rfliam/storm-rhel-packaging/storm-0.7.4-1.el6.x86_64.rpm',
     	source		=> 'http://dl.dropbox.com/u/25821613/storm/storm-0.7.4-1.el6.x86_64.rpm',
-    	require		=> [Package['zeromq'], Package['zmq']]
+    	require		=> [Package['zeromq'], Package['jzmq']]
     }
 
 
