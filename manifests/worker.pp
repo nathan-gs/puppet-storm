@@ -10,5 +10,6 @@ class storm::worker (
 
 	service { 'storm-superviser':
 		ensure	=> running,
+		require => [Package['storm']],
 	}
 }
