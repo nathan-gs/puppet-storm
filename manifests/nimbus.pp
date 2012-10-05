@@ -10,6 +10,5 @@ class storm::nimbus (
 	service { 'storm-nimbus':
 		ensure	=> running,
 		require => [Package['storm']],
-		enable  => true,
 	}
 }
