@@ -11,5 +11,6 @@ class storm::worker (
 	service { 'storm-supervisor':
 		ensure	=> running,
 		require => [Package['storm']],
+		enable  => true,
 	}
 }

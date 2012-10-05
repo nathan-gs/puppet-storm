@@ -5,7 +5,6 @@ storm.zookeeper.servers:
 <% zookeeper_servers.each do |zk| -%>
   - "<%= zk %>"
 <% end -%>
-# 
 nimbus.host: "<%= @nimbus_host %>"
 
 worker.childopts: "-Xmx1024m"
