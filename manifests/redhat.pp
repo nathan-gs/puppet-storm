@@ -1,6 +1,9 @@
 class storm::redhat
 {
-	
+
+	package { 'unzip':
+	    ensure  => installed,
+    }
 	
     package { 'zeromq':
     	ensure		=> installed,
