@@ -7,9 +7,14 @@ storm.zookeeper.servers:
 <% end -%>
 nimbus.host: "<%= @nimbus_host %>"
 
-worker.childopts: "-Xmx1024m"
+worker.childopts: "-Xm<%= worker_mem %>m"
 storm.local.dir: "/var/cache/storm"
 
 ui.port: 9088
 
 java.library.path: "/usr/local/lib:/opt/local/lib:/usr/lib64:/usr/lib:/usr/local/lib64:/usr/lib/hadoop/lib/native"
+
+supervisor.slots.ports:
+<% supervisor_slots.each do |slot| -%>
+  - "<%= slot %>"
+<% end -%>

@@ -1,6 +1,8 @@
 class storm (
 	$zookeeper_servers = [],
-	$nimbus_host = undef
+	$nimbus_host = undef,
+    $supervisor_slots = [ 6700, 6701, 6702, 6703 ],
+    $worker_mem = 1024
 )
 {
 	
