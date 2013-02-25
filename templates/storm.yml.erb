@@ -16,5 +16,5 @@ java.library.path: "/usr/local/lib:/opt/local/lib:/usr/lib64:/usr/lib:/usr/local
 
 supervisor.slots.ports:
 <% supervisor_slots.each do |slot| -%>
-  - "<%= slot %>"
+  - <%= slot %>
 <% end -%>
