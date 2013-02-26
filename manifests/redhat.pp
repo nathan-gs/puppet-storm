@@ -10,6 +10,7 @@ class storm::redhat
     	provider	=> rpm,
     	#source		=> 'https://github.com/downloads/rfliam/storm-rhel-packaging/zeromq-2.2.0-1.el6.x86_64.rpm',
     	source		=> 'http://dl.dropbox.com/u/25821613/storm/zeromq-2.2.0-1.el6.x86_64.rpm',
+        ensure      => '2.2.0-1.el6',
     }
 
     package { 'jzmq':
