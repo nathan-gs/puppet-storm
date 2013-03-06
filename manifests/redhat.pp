@@ -23,6 +23,7 @@ class storm::redhat
     	ensure		=> '2.1.0-1.el6',
     	provider	=> rpm,
     	source		=> 'https://dl.dropbox.com/u/25821613/storm/jzmq-2.1.0-1.el6.x86_64.rpm',
+    	require		=> [Package['zeromq']]
     }
 
     package { 'jzmq-devel':
