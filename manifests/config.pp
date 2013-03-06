@@ -15,13 +15,6 @@ class storm::config (
  		require => [Package['storm'], File['/var/cache/storm']],
  	}
 
-    file { "/opt/storm/sysconfig/storm" :
-        ensure	=> present,
-        owner	=> root,
-        content	=> template('storm/sysconfig'),
-        require => [Package['storm']],
-    }
-
     file { "/etc/sysconfig/storm" :
         ensure	=> present,
         owner	=> root,
