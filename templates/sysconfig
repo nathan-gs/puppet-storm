@@ -11,7 +11,7 @@ NIMBUS_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
 # Worker configuration options
 SUPERVISOR_JVM_MEMORY="1024m"
 # Additional nimbus JVM options
-SUPERVISORR_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
+SUPERVISOR_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
 
 # UI configuration options
 UI_JVM_MEMORY="768m"

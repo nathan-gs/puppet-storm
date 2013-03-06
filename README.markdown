@@ -18,7 +18,7 @@
 
 ## Credits
 
-- https://github.com/rfliam/storm-rhel-packaging 
+- https://github.com/acromusashi/storm-installer
 
 
 ## Author
