@@ -1,7 +1,7 @@
 class storm::redhat
 {
 
-	package { 'unzip', 'uuid':
+	package { ['unzip', 'uuid']:
 	    ensure  => installed,
     }
 	
