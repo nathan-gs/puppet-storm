@@ -1,8 +1,6 @@
-class storm::ui(
-    $port = 9088,
-)
+class storm::ui inherits storm
 {
-
+    require storm::config
 
     service { 'storm-ui':
         ensure	=> running,

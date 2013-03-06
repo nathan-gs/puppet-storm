@@ -10,7 +10,7 @@ nimbus.host: "<%= @nimbus_host %>"
 worker.childopts: "-Xmx<%= worker_mem %>m"
 storm.local.dir: "/var/cache/storm"
 
-ui.port: 9088
+ui.port: <%= ui_port %>
 
 java.library.path: "/usr/local/lib:/opt/local/lib:/usr/lib64:/usr/lib:/usr/local/lib64:/usr/lib/hadoop/lib/native"
 
