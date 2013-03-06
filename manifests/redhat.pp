@@ -1,7 +1,7 @@
 class storm::redhat
 {
 
-	package { 'unzip':
+	package { 'unzip', 'uuid':
 	    ensure  => installed,
     }
 	
@@ -9,6 +9,7 @@ class storm::redhat
     	provider	=> rpm,
         source		=> 'https://dl.dropbox.com/u/25821613/storm/zeromq-2.1.7-1.el6.x86_64.rpm',
         ensure      => '2.1.7-1,el6',
+        require     => Package['uuid']
     }
 
     package { 'zeromq-devel':
@@ -36,7 +37,7 @@ class storm::redhat
     	ensure		=> '0.8.2-1.el6',
     	provider	=> rpm,
     	source		=> 'https://dl.dropbox.com/u/25821613/storm/storm-0.8.2-1.el6.x86_64.rpm',
-    	require		=> [Package['zeromq'], Package['jzmq'], Package['zeromq-devel'], Package['jzmq-devel']]
+    	require		=> [Package['zeromq'], Package['jzmq'], Package['zeromq-devel'], Package['jzmq-devel'], Package['unzip']]
     }
 
     package { 'storm-service':
