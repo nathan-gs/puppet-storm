@@ -8,14 +8,14 @@ class storm::redhat
     package { 'zeromq':
     	provider	=> rpm,
         source		=> 'https://dl.dropbox.com/u/25821613/storm/zeromq-2.1.7-1.el6.x86_64.rpm',
-        ensure      => '2.1.7-1,el6',
+        ensure      => '2.1.7-1.el6',
         require     => Package['uuid']
     }
 
     package { 'zeromq-devel':
     	provider	=> rpm,
         source		=> 'https://dl.dropbox.com/u/25821613/storm/zeromq-devel-2.1.7-1.el6.x86_64.rpm',
-        ensure      => '2.1.7-1,el6',
+        ensure      => '2.1.7-1.el6',
         require		=> [Package['zeromq']]
     }
 
