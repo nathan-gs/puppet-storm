@@ -6,4 +6,10 @@ class storm::nimbus inherits storm {
 		ensure	=> running,
 		require => [Package['storm']],
 	}
+
+	file { "/usr/local/bin/storm":
+        ensure => link,
+        target => "/opt/storm/bin/storm",
+    }
+
 }
